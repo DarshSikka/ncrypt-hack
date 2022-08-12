@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/products/addproduct" style="display: flex; flex-direction: column;">
+        <input required type="text" name="name" placeholder="Name of the product"/>
+        <input required type="number" name="price" placeholder="Cost of the product" />
+        <select name="gender" required>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+            <option value="B">Both Genders</option>
+        </select>
+        <input type="text" required name="category" placeholder="Enter category of the product (eg. sports)" />
+        <input type="number" required name="stock" placeholder="Enter stock of the product" />
+        <input type="text" required name="color" placeholder="Enter color of the product" />
+        <textarea type="text" required name="description" placeholder="Description of the product"></textarea>
+        <input type="text" name="image_url" required placeholder="Image URL"/>
+        <input type="text" name="brand" required placeholder="Enter Brand"/>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

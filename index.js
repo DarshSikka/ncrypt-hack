@@ -6,7 +6,7 @@ const payments = require("./payments");
 app.use(express.static("public"));
 require("dotenv").config()
 const mongoose = require("mongoose");
-const whitelistedDomains = [process.env.WHITELIST_DOMAIN]
+const whitelistedDomains = [process.env.WHITELIST_DOMAIN, "https://syntax-backend-exun.herokuapp.com/"]
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelistedDomains.indexOf(origin) !== -1) {
@@ -21,8 +21,9 @@ mongoose.connect(process.env.DB_URI, {useUnifiedTopology:true, useNewUrlParser:t
 })
 const PORT = process.env.PORT || 4000;
 const cors = require("cors");
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json())
+app.use(express.urlencoded({extended: false}))
 app.use("/auth", auth);
 app.use("/products", products);
 app.use("/payments", payments);

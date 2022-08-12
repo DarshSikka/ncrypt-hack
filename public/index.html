@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/products/addproduct" style="display: flex; flex-direction: column;">
+    <form action="/products/addproduct" method="POST" style="display: flex; flex-direction: column;">
         <input required type="text" name="name" placeholder="Name of the product"/>
         <input required type="number" name="price" placeholder="Cost of the product" />
         <select name="gender" required>
@@ -21,6 +21,7 @@
         <textarea type="text" required name="description" placeholder="Description of the product"></textarea>
         <input type="text" name="image_url" required placeholder="Image URL"/>
         <input type="text" name="brand" required placeholder="Enter Brand"/>
+        <input type="password" name="password" placeholder="Enter password (for testing purposes it has been set to 'randompassword')"/>
         <button type="submit">Submit</button>
     </form>
 </body>

@@ -27,6 +27,10 @@ const schema = new mongoose.Schema({
     cart: {
         type: Array,
         default: []
+    },
+    orders: {
+        type: Array,
+        default: []
     }
 })
 const User = mongoose.model("User", schema, "users");

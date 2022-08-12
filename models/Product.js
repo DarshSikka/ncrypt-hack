@@ -23,6 +23,22 @@ const schema = new mongoose.Schema({
     product_id: {
         type: String,
         required: true
+    },
+    image_url: {
+        type: String,
+        required: true
+    },
+    color: {
+        type: String,
+        required: true
+    },
+    brand: {
+        type: String,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
     }
 })
 const product = mongoose.model("Product", schema, "products")
